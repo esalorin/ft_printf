@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-static int	ft_check_sp(char *s, t_data d)
+static int	check_sp(char *s, t_data d)
 {
 	int		len;
 	char	*s1;
@@ -40,7 +40,7 @@ static int	ft_check_sp(char *s, t_data d)
 	return (len - 1);
 }
 
-static int	ft_check_c(t_data d)
+static int	check_c(t_data d)
 {
 	int min2;
 
@@ -76,7 +76,7 @@ int			csp_flags(t_data d, int l, va_list ap)
 	}
 	check_width(&d);
 	if (d.conv == '%')
-		return (ft_check_c(d));
+		return (check_c(d));
 	return (print_csp(d, ap));
 }
 

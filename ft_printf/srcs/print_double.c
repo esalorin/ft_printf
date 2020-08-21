@@ -6,7 +6,7 @@
 /*   By: esalorin <esalorin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 14:29:31 by esalorin          #+#    #+#             */
-/*   Updated: 2020/08/20 19:53:34 by esalorin         ###   ########.fr       */
+/*   Updated: 2020/08/21 14:53:41 by esalorin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ static int	ft_checkf(char *s, t_data d, int res)
 
 int			double_flags(t_data d, int i, va_list ap)
 {
-	int	l;
-
 	d.prec = 6;
 	check_flags(&d);
 	check_width(&d);
@@ -80,7 +78,7 @@ int			double_flags(t_data d, int i, va_list ap)
 		if (d.sub[i] == '.')
 			check_precision(&d, i + 1);
 	}
-	return (ft_print_double(d, ap));
+	return (print_double(d, ap));
 }
 
 int			print_double(t_data d, va_list ap)

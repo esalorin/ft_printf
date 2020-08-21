@@ -6,7 +6,7 @@
 /*   By: esalorin <esalorin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/23 22:05:01 by eenasalorin       #+#    #+#             */
-/*   Updated: 2020/08/20 19:51:39 by esalorin         ###   ########.fr       */
+/*   Updated: 2020/08/21 14:53:23 by esalorin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	ft_print_oux(unsigned long long u, t_data d)
 		b = ft_strlen(s);
 	}
 	else
-		b = ft_check_oux(s, d);
+		b = check_oux(s, d);
 	free(s);
 	return (b);
 }
@@ -73,7 +73,7 @@ static int	ft_print_di(long long n, t_data d)
 		free(s);
 		return (res);
 	}
-	res = ft_check_di(s, d);
+	res = check_di(s, d);
 	free(s);
 	return (res);
 }

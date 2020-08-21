@@ -6,7 +6,7 @@
 /*   By: esalorin <esalorin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/17 18:46:16 by esalorin          #+#    #+#             */
-/*   Updated: 2020/08/20 19:47:24 by esalorin         ###   ########.fr       */
+/*   Updated: 2020/08/21 14:53:01 by esalorin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static char	*ft_maketemp(int n, int i)
 	return (s);
 }
 
-int			ft_check_oux(char *s, t_data d)
+int			check_oux(char *s, t_data d)
 {
 	char	*s1;
 	char	*s2;
@@ -84,7 +84,7 @@ int			ft_check_oux(char *s, t_data d)
 	return (ft_check_dioux(temp, d));
 }
 
-int			ft_check_di(char *s, t_data d)
+int			check_di(char *s, t_data d)
 {
 	char	*s1;
 	char	*temp;
