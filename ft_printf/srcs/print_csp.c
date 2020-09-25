@@ -6,7 +6,7 @@
 /*   By: esalorin <esalorin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/22 18:45:08 by esalorin          #+#    #+#             */
-/*   Updated: 2020/08/20 19:49:14 by esalorin         ###   ########.fr       */
+/*   Updated: 2020/09/25 18:03:32 by esalorin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,10 @@ static int	check_sp(char *s, t_data d)
 	len = ft_strlen(s);
 	if (len == 0 && !d.width)
 		return (0);
-	if ((d.prec > 0 || d.prec == -1) && len > d.prec)
+	if ((d.prec >= 0) && len > d.prec)
 	{
-		if (d.prec == -1)
-			s1 = ft_strnew(0);
-		else
-			s1 = ft_strsub(s, 0, d.prec);
-		len = (d.prec == -1) ? 0 : d.prec;
+		s1 = ft_strsub(s, 0, d.prec);
+		len = d.prec;
 	}
 	s1 = (s1 == NULL) ? ft_strdup(s) : s1;
 	if (d.minus)
